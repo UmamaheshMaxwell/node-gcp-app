@@ -8,7 +8,7 @@ app.get("/", (req, res) => {
     res.json("Welcome to Node API")
 })
 
-app.get("/user", (req, res) => {
+app.get("/users", (req, res) => {
     res.json([
         { id: 1, name: "Scott Desatnick" },
         { id: 2, name: "Adam Colson" },
