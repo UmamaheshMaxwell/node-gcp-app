@@ -17,7 +17,6 @@ steps:
      - deploy
      - ${_SERVICE_NAME}
      - --no-allow-unauthenticated
-     - --allow-origin=https://angular-gcp-service-3imv474m7a-uc.a.run.app
      - --image=gcr.io/${PROJECT_ID}/${_SERVICE_NAME}:${COMMIT_SHA}
      - --port=8080
      - --region=${_REGION}
