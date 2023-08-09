@@ -16,7 +16,6 @@ steps:
      - run
      - deploy
      - ${_SERVICE_NAME}
-     - --allow-unauthenticated
      - --image=gcr.io/${PROJECT_ID}/${_SERVICE_NAME}:${COMMIT_SHA}
      - --port=8080
      - --region=${_REGION}
