@@ -6,13 +6,13 @@ const app = express()
 
 app.use(cors({credentials: true, origin: '*'}));
 
-// Add CORS headers
-// app.use(function(req, res, next) {
-//     res.header("Access-Control-Allow-Origin", "*");
-//     res.set('Access-Control-Allow-Methods', 'GET, POST, OPTIONS');
-//     res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
-//     next();
-// });
+//Add CORS headers
+app.use(function(req, res, next) {
+    res.header("Access-Control-Allow-Origin", "*");
+    res.set('Access-Control-Allow-Methods', 'GET, POST, OPTIONS');
+    res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+    next();
+});
 
 app.get("/", (req, res) => {
     res.json("Welcome to Node API")
