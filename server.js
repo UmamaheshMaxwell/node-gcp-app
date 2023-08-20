@@ -20,6 +20,7 @@ app.get("/", (req, res) => {
 })
 
 app.get("/users", (req, res) => {
+    res.setHeader('Content-Type', 'application/json; charset=UTF-8')
     res.json(users)
 })
 
