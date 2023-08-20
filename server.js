@@ -1,6 +1,7 @@
 const express = require("express")
 const cors = require("cors")
 const app = express()
+const users = require("./users.json")
 
 
 
@@ -19,13 +20,9 @@ app.get("/", (req, res) => {
 })
 
 app.get("/users", (req, res) => {
-    res.json([
-        { id: 1, name: "Scott Desatnick" },
-        { id: 2, name: "Adam Colson" },
-        { id: 3, name: "Tuan Bui" },
-        { id: 4, name: "Jagrav"}
-    ])
+    res.json(users)
 })
+
 
 const PORT = 8080
 
